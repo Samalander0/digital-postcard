@@ -1,0 +1,377 @@
+@import url("https://use.typekit.net/zhh2xut.css");
+
+body, html {
+  margin: 0;
+  padding: 0;
+  color: white;
+  overscroll-behavior: none;
+}
+* {
+  box-sizing: border-box;
+}
+
+p {
+  font-family: "degular-text", sans-serif;
+}
+
+#nav {
+  position: fixed;
+  top: 1vw;
+  right: 1vw;
+  background: white;
+  z-index: 100;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: grid;
+    position: relative;
+
+    img {
+      height: 1rem;
+    }
+    
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:nth-of-type(1)::after {
+      content: "";
+      width: 1px;
+      height: 1rem;
+      background: rgb(0 0 0 / 0.5);
+      position: absolute;
+      top: 0;
+      right: -0.5rem;
+    }
+  }
+
+  transform: scale(0);
+  transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: 1.5s;
+
+  &.shown {
+    transform: scale(1);
+  }
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 0;
+  clip-path: circle(0% at 50% 50%);
+  transition: 0.75s ease-in-out;
+  transition-delay: 0.5s;
+
+  &.loaded {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+
+#loader {
+  position: fixed;
+  inset: 0px;
+  background: white;
+  color: black;
+  display: grid;
+  place-items: center;
+  font-family: "degular-display", "sans-serif";
+  font-weight: 800;
+  font-size: 3vw;
+  text-transform: uppercase;
+  padding-right: 17px; // Prevents layout shifting when the scrollbar loads in
+
+  &.loaded {
+    padding-right: 0;
+  }
+
+  h2 {
+    transform: rotate(-5deg);
+    background-image: url(https://media.tenor.com/Il41GOimvMsAAAAd/travel.gif);
+    background-size: cover;
+    background-position-y: 35%;
+    background-clip: text; 
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
+h2.text {
+  font-family: "gelato-luxe", cursive;
+  font-weight: 400;
+  margin: 0;
+  font-size: 4vw;
+  padding-right: 20vw;
+  transform: translateY(calc(-50% - 5vw)) rotate(-5deg);
+}
+h1.text {
+  font-family: "degular-display", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 12vw;
+  transform: translateY(-50%) rotate(-5deg);
+
+  &:nth-of-type(2) {
+    z-index: 2;
+    mix-blend-mode: color;
+    pointer-events: none;
+  }
+  &:nth-of-type(3) {
+    z-index: 3;
+    color: transparent;
+    -webkit-text-stroke: 3px white;
+    pointer-events: none;
+
+    @media (max-width: 1100px) {
+      -webkit-text-stroke: 2px white;
+    }
+    @media (max-width: 750px) {
+      -webkit-text-stroke: 1px white;
+    }
+  }
+}
+h3.text {
+  font-family: "degular", sans-serif;
+  font-weight: 600;
+  font-size: 1.5vw;
+  transform: translateY(4vw) rotate(-5deg);
+
+  &:after {
+    content: "";
+    width: 1em;
+    height: 1em;
+    background: blue;
+  }
+}
+.text {
+  position: fixed;
+  top: 50vh;
+  width: 100%;
+  text-align: center;
+}
+
+#images {
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+  padding: calc(100vh + 0.5vw) 0 0.5vw 0;
+  div {
+    border-radius: 8px;
+    outline: 0.5vw solid white;
+    background: white;
+    position: relative;
+    
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+}
+
+#new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+  padding-top: 50vh;
+  height: calc(52vh - 2rem);
+  box-sizing: content-box;
+  position: relative;
+
+  button {
+    z-index: 100;
+    transform: rotate(-5deg);
+    border: 0.25em solid white;
+    border-radius: 5rem;
+    padding: 0.2em 2em 0.4em 2em;
+    font-size: 1.2rem;
+    font-family: "degular", sans-serif;
+    color: white;
+    background: var(--background);
+    transition: 0.2s ease-out;
+
+    &:hover {
+      color: var(--hover-color);
+      background: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      font-size: 1rem;
+    }
+    @media (max-width: 700px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  #mobile {
+    position: absolute;
+    bottom: 10vh;
+    width: 80vw;
+    text-align: center;
+    opacity: 0.5;
+    transform: rotate(-5deg);
+
+    @media (min-width: 800px) {
+      display: none;
+    }
+  }
+}
+
+#info {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+
+  #content {
+    background: white;
+    color: black;
+    z-index: 1;
+    padding: 2rem;
+    border-radius: 8px;
+    font-family: "degular-text", sans-serif;
+
+    h2 {
+      font-family: "degular-display", sans-serif;
+      margin: 0 0 0.1rem 0;
+      font-size: 2rem;
+    }
+    p {
+      margin: 0;
+      max-width: 50ch;
+      line-height: 1.5;
+
+      a {
+        color: var(--color);
+        text-decoration: underline rgb(0 0 0 / 0.2);
+        transition: 0.2s ease-out;
+
+        &:hover {
+          text-decoration: underline var(--color);
+        }
+      }
+    }
+    small {
+      opacity: 0.5;
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    transition: 0.2s ease-out;
+  }
+  #click-to-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: rgb(0 0 0 / 0.1);
+    transition: 0.2s ease-out;
+  }
+
+  &.hidden {
+    #click-to-close {
+      opacity: 0;
+    }
+    #content {
+      opacity: 0;
+    }
+    pointer-events: none;
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+  padding: 2vh 0;
+
+  #city-info {
+    text-align: right;
+    line-height: 1;
+    position: relative;
+
+    p {
+      @media (max-width: 600px) {
+        font-size: 0.8rem;
+      }
+    }
+
+    a {
+      color: inherit;
+      color: rgb(255 255 255 / 0.8);
+      text-decoration: none;
+      text-decoration: underline rgb(255 255 255 / 0.2);
+      transition: 0.2s ease-out;
+
+      &:hover {
+        text-decoration: underline white;
+      }
+
+      font-size: 0.8rem;
+
+      @media (max-width: 600px) {
+        font-size: 0.6rem;
+      }
+    }
+
+    &:after {
+      content: "";
+      width: 1px;
+      height: 1rem;
+      background: white;
+      position: absolute;
+      right: -0.5rem;
+      top: 1.55rem;
+      opacity: 0.5;
+    }
+  }
+  
+  .footer-made-by {
+    display: flex;
+    align-items: center;
+    p {
+      opacity: 0.5;
+      font-size: 0.8rem;
+      text-align: right;
+    }
+    a {
+      opacity: 0.9;
+      transition: 0.2s ease-out;
+      
+      img {
+        max-width: 4rem;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 400px) {
+      p {
+        font-size: 0.6rem;
+      }
+      a img {
+        max-width: 2.5rem;
+      }
+    }
+  }
+}

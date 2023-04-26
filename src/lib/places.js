@@ -169,5 +169,5 @@ export const places = [
   - #3 is big
 
   Planned Places:
-  [ ] Barcelona
+  [x] Barcelona
 */

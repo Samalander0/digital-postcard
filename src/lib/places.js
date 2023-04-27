@@ -127,7 +127,7 @@ export const places = [
   },
   {
     name: "Barcelona",
-    longName: "Barcelona, Spain",
+    longName: "Barcelona, Spain 🇪🇸",
     emoji: "🇪🇸",
     color: "#ff9166",
     background: "#e36956",
@@ -141,6 +141,132 @@ export const places = [
       "1583167607431-5e8d3de517d5",
       "1579126808416-201d2e4c0e87",
       "1602797171402-9774bd8f8eb6",
+    ]
+  },
+  {
+    name: "Bangkok",
+    longName: "Bangkok, Thailand 🇹🇭",
+    emoji: "🐲",
+    color: "#ffaa5e",
+    background: "#d08159",
+    cordinates: "[13° 44' 12.1812\" N], [100° 31' 23.4696\" E]",
+    link: "https://www.google.com/maps/place/Bangkok,+Thailand",
+    images: [
+      "1552550018-5253c1b171e1",
+      "1598970605070-a38a6ccd3a2d",
+      "1587905122561-0f29aa6f150b",
+      "1582468546235-9bf31e5bc4a1",
+      "1562602833-0f4ab2fc46e3",
+      "1588732807335-2132a3f9489e",
+      "1536755515625-f467c040d4c7",
+    ]
+  },
+  {
+    name: "Buenos Aires",
+    longName: "Buenos Aires, Argentina 🇦🇷",
+    emoji: "",
+    color: "#a7f070",
+    background: "#38b764",
+    cordinates: "[34° 36' 13.3992\" S], [58° 22' 53.7312\" W]",
+    link: "https://www.google.com/maps/place/Buenos+Aires,+Argentina",
+    images: [
+      "1589909202802-8f4aadce1849",
+      "1610135206707-0f03e4800631",
+      "1576541572620-cbc5457517b4",
+      "1611268048707-37ab00943af9",
+      "1572181330858-13fd026f94a9",
+      "1576542037837-8c6d4bfb6152",
+      "1557867535-202d7e2759fd",
+    ]
+  },
+  {
+    name: "Marrakesh",
+    longName: "Marrakesh, Morocco 🇲🇦",
+    emoji: "🌴",
+    color: "#3ca1a3",
+    background: "#3d706e",
+    cordinates: "[31° 37' 43.2264\" N], [7° 59' 31.3692\" W]",
+    link: "https://www.google.com/maps/place/Marrakesh,+Morocco",
+    images: [
+      "1517315403381-a12569a9da85",
+      "1580746738099-1cb74f972feb",
+      "1517137660927-27542f89984d",
+      "1552141580-0112f2806446",
+      "1517820880872-a008906947aa",
+      "1628642393776-70a715f2cc40",
+      "1565777645145-887bae023efc",
+    ]
+  },
+  {
+    name: "Agra",
+    longName: "Agra, Uttar Pradesh, India 🇮🇳",
+    emoji: "🕌",
+    color: "#eb564b",
+    background: "#e36956",
+    cordinates: "[27° 10' 36.0120\" N], [78° 0' 29.0592\" E]",
+    link: "https://www.google.com/maps/place/Agra,+Uttar+Pradesh,+India",
+    images: [
+      "1616392714640-2535b31df0d6",
+      "1580105142577-98b7a439fbea",
+      "1604214797312-d65d6cf91408",
+      "1623811852177-611cda0b372f",
+      "1592555793101-4735dfe82341",
+      "1577123308384-27bce45e7495",
+      "1577123050881-7aebf2221d58",
+    ]
+  },
+  {
+    name: "Milan",
+    longName: "Milan, Lombardy, Italy 🇮🇹",
+    emoji: "⛪",
+    color: "#eb564b",
+    background: "#ba6156",
+    cordinates: "[45° 27' 52.7904\" N], [9° 11' 18.7440\" E]",
+    link: "https://www.google.com/maps/place/Milan,+Metropolitan+City+of+Milan,+Italy",
+    images: [
+      "1586427020218-6e0601c76b15",
+      "1588523641901-a18c795682e6",
+      "1539108842340-ae72fbf39857",
+      "1595193284747-a1e41bae7746",
+      "1619601632963-b45b75a26584",
+      "1570391316236-767465a0dec6",
+      "1512204925985-f52390a87fda",
+    ]
+  },
+  {
+    name: "Manila",
+    longName: "Manila, Metro Manila, Philippines 🇵🇭",
+    emoji: "🎍",
+    color: "#4da6ff",
+    background: "#4b5bab",
+    cordinates: "[14° 35' 58.2432\" N], [120° 59' 3.1992\" E]",
+    link: "https://www.google.com/maps/place/Manila,+Metro+Manila,+Philippines",
+    images: [
+      "1519010470956-6d877008eaa4",
+      "1630317287099-af41630c66fd",
+      "1606964333733-36586a696928",
+      "1630071483333-6222a0c29408",
+      "1579518452033-ef6c17f9b0c3",
+      "1566159609808-eee28d7f8e03",
+      "1613900723434-e1afdfd7ad4d",
+    ]
+  },
+  {
+    name: "Prague",
+    longName: "Prague, Czech Republic 🇨🇿",
+    emoji: "🏰",
+    color: "#ff9166",
+    background: "#e36a36",
+    cordinates: "[50° 4' 25.1688\" N], [14° 25' 6.7440\" E]",
+    link: "https://www.google.com/maps/place/Prague,+Czechia",
+    images: [
+      "1629044563717-8a614699f030",
+      "1549041490-f64d74264d25",
+      "1571778200037-250828fe3eee",
+      "1584142639606-325473d1b2dc",
+      "1620750490146-acfd85de1da9",
+      "1564101094-eca46513ee85",
+      "1573099599219-839542cadd67",
     ]
   },
 ]
@@ -166,8 +292,14 @@ export const places = [
 
   In most layouts:
   - #1, #2, #6, & #7 are small
-  - #3 is big
+  - #3/sometimes #2 are big
 
   Planned Places:
-  [x] Barcelona
+  [X] Bangkok, Thailand
+  [X] Buenos Aires, Argentina
+  [X] Marrakesh, Morocco
+  [X] Agra, India
+  [X] Milan, Italy
+  [X] Manila, Philippines
+  [ ] Prague, Czech Republic 
 */

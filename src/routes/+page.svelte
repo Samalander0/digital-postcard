@@ -21,11 +21,12 @@
   const placeNum = getRandomInt(places.length);
   let place = places[placeNum];
   //place = places[7];
+  //place = places[places.length - 1]
   const layoutNum = getRandomInt(layouts.length);
   let imgLayout = layouts[layoutNum];
   //imgLayout = layouts[3];
-  const pretitles = ["Visit", "Explore", "Enjoy", "Discover", "Experience"];
-  let pretitleText = pretitles[getRandomInt(5)];
+  const pretitles = ["Visit", "Explore", "Enjoy", "Discover", "Experience", "Greetings From"];
+  let pretitleText = pretitles[getRandomInt(pretitles.length)];
   let buttonText = pretitleText;
 
   let showInfo = false;
@@ -119,7 +120,7 @@
   <div id="content">
     <h2>What's this?</h2>
     <p>
-      First of all, thanks for visiting! Digital Postcards is a passion project created by <a href="//www.samalander.dev" target="_blank">Sam Cheng</a> with a goal of showcasing interesting cities from around the world. It uses GSAP's <a href="https://greensock.com/scrolltrigger/" target="_blank">Scroll Trigger</a> & <a href="https://greensock.com/scrollsmoother/" target="_blank">Scroll Smoother</a> for the scroll effects, and images are from <a href="https://unsplash.com/" target="_blank">Unsplash</a>.<br/> There are currently {places.length} cities that you can visit (That's {places.length * 7} images), and each are curated manually. You also have a chance of getting one of {layouts.length} image layouts, each highlighting different images. In total (including the text above the city name), there are {places.length * layouts.length * pretitles.length} different combinations.
+      First of all, thanks for visiting! Digital Postcards is a passion project created by <a href="//www.samalander.dev" target="_blank">Sam Cheng</a> with a goal of showcasing interesting cities from around the world. It uses GSAP's <a href="https://greensock.com/scrolltrigger/" target="_blank">Scroll Trigger</a> & <a href="https://greensock.com/scrollsmoother/" target="_blank">Scroll Smoother</a> for the scroll effects, and images are from <a href="https://unsplash.com/" target="_blank">Unsplash</a>.<br/> There are currently {places.length} cities that you can visit (That's {places.length * 7} images), and each have manually curated images, colors, and information. You also have a chance of getting one of {layouts.length} image layouts, each highlighting different images. In total (including the text above the city name), there are {places.length * layouts.length * pretitles.length} different combinations.
     </p>
     <small>Click outside to close</small>
   </div>
@@ -138,12 +139,12 @@
       <main id="images">
         {#each place.images as image, i}
           <div style={`width: ${imgLayout[i].width}vw; margin-left: ${imgLayout[i].position}%; margin-top: ${imgLayout[i].top}vw; overflow: hidden; height: ${imgLayout[i].height}vw;`} data-speed={imgLayout[i].speed}>
-            <img src={`https://images.unsplash.com/photo-${image}?w=${imgLayout[i].width * 16}`} />
+            <img src={`https:\/\/images.unsplash.com/photo-${image}?w=${imgLayout[i].width * 16}`} />
           </div>
         {/each}
       </main>
       <div id="new">
-        <button on:click={() => {window.location.reload()}} style={`--background: ${place.color}; --hover-color: ${place.background};`} title={`Currently ${places.length} cities (That's ${places.length * 7} images!) & ${layouts.length} image layouts`} on:mouseover={() => {buttonText = pretitles[getRandomInt(5)]}}>{buttonText} a new city?</button>
+        <button on:click={() => {window.location.reload()}} style={`--background: ${place.color}; --hover-color: ${place.background};`} title={`Currently ${places.length} cities (That's ${places.length * 7} images!) & ${layouts.length} image layouts`}>Get a new postcard?</button>
         <p id="mobile">Psst... This experience was built for desktop, so try it on a larger screen for best results!</p>
       </div>
       <footer>

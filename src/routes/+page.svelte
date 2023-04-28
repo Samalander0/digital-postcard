@@ -3,6 +3,7 @@
   import '$lib/styles/main.scss';
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
+  import Metatags from '$lib/components/Metatags.svelte'
 
   // Other Imports
   import signature from '$lib/images/signature-white.png';
@@ -86,14 +87,11 @@
   })
 </script>
 
-<svelte:head>
-  {#if loading}
-    <title>Digital Postcards | Loading...</title>
-  {:else}
-	 <title>Digital Postcards | {place.name}</title>
-  {/if}
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
+{#if loading}
+  <Metatags title="Digital Postcards"/>
+{:else}
+  <Metatags title={`Digital Postcards | ${place.name}`}/>
+{/if}
 
 <!--
   Made By Sam Cheng
